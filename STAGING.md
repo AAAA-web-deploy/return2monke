@@ -1,8 +1,8 @@
 # Staging setup
 
-Automatic deploys go to the `staging` branch of https://github.com/AAAA-web-deploy/return2monke.git. The GitHub Actions workflow builds a Vercel Preview. It does not deploy production, attach `trogebob.world`, or merge `main`.
+Automatic updates go to the `staging` branch of https://github.com/AAAA-web-deploy/return2monke.git. That push publishes the static site through GitHub Pages at https://trogebob.world/. The domain is already attached to this repository's Pages site. This workflow does not change DNS, merge `main`, or mark the site as indexable.
 
-`vercel.json` turns off Vercel's Git deployments so this workflow is the only automatic deployer. A successful Git push is not itself a deployment. The preview URL is the URL printed by the successful Actions run.
+`vercel.json` still turns off Vercel's own Git deployments. The Vercel preview workflow remains available once its secrets exist. A successful Git push is not itself a deployment. The live page is ready when the GitHub Pages workflow for that commit succeeds.
 
 ## One-time account steps
 
@@ -24,8 +24,8 @@ Automatic deploys go to the `staging` branch of https://github.com/AAAA-web-depl
 
 `npm run stage:check` runs the same checks and prints what would be committed.
 
-The `stop` hook in `.cursor/hooks.json` is a fallback for a finished Cursor task. It runs `npm run stage` when the checkout has something to publish and a sync is not already running. That command pushes `staging`, which starts the preview workflow.
+The `stop` hook in `.cursor/hooks.json` is a fallback for a finished Cursor task. It runs `npm run stage` when the checkout has something to publish and a sync is not already running. That command pushes `staging`, which publishes GitHub Pages.
 
 ## Production
 
-Leave `deployment.productionEnabled` false. Staging pages send `noindex` and `robots.txt` disallows crawling. Publishing `trogebob.world` is a separate decision.
+Leave `deployment.productionEnabled` false. The Pages site sends `noindex` and `robots.txt` disallows crawling. Search indexing and a separate production launch remain off.

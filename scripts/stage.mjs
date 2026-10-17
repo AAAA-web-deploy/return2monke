@@ -342,7 +342,7 @@ try {
     fail(`Commit succeeded locally, but the push to staging failed. Local work was not discarded. ${pushed.stderr || pushed.stdout}`);
   }
   const sha = git(["rev-parse", "HEAD"]).stdout;
-  console.log(`Pushed staging at ${sha}. That push starts the staging preview workflow. The preview URL is the URL from the successful Actions run, not the Git push itself.`);
+  console.log(`Pushed staging at ${sha}. That push publishes GitHub Pages at https://trogebob.world/ when the Pages workflow succeeds.`);
   succeed({ sha, pushed: true });
 } catch (error) {
   fail(error instanceof Error ? error.message : String(error));
