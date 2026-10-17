@@ -33,7 +33,6 @@ export function StoryBoard() {
 
   return (
     <section id="story" className="rd-section" aria-labelledby="story-heading">
-      <p className="eyebrow">{copy.story.eyebrow}</p>
       <h2 id="story-heading">{copy.story.heading}</h2>
       <div className="story-controls">
         <button type="button" className="button button-ink" onClick={() => move(-1)}>
