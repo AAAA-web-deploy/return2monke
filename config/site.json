@@ -25,8 +25,8 @@
   "community": {
     "xUrl": "https://x.com/return__monke",
     "telegramUrl": "https://t.me/return2monke_floorit",
-    "dextoolsUrl": null,
-    "dexscreenerUrl": null
+    "dextoolsUrl": "https://www.dextools.io/app/ether/pair-explorer/0x53d4fde235a1d67130ac499cf20d17724080063d",
+    "dexscreenerUrl": "https://dexscreener.com/ethereum/0x53d4fde235a1d67130ac499cf20d17724080063d"
   },
   "event": {
     "name": "ApeFest",
