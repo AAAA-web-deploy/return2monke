@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import type { CopyContent, SiteConfig } from "@/lib/types";
-import { contractCopyValue, contractDisplayValue, copyText, formatZonedTime } from "@/lib/presentation";
+import { contractDisplayValue, copyText, formatZonedTime } from "@/lib/presentation";
 
 type TokenDeskProps = {
   site: SiteConfig;
@@ -11,7 +11,6 @@ type TokenDeskProps = {
 
 export function TokenDesk({ site, copy }: TokenDeskProps) {
   const address = contractDisplayValue(site.token, copy.contractNotice);
-  const copyableAddress = contractCopyValue(site.token);
   const fallbackRef = useRef<HTMLTextAreaElement>(null);
   const [copyState, setCopyState] = useState<"idle" | "copied" | "fallback">("idle");
   const startEastern = formatZonedTime(site.event.startsAt, "America/New_York", "Eastern");
@@ -20,8 +19,8 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
   const endPacific = formatZonedTime(site.event.endsAt, "America/Los_Angeles", "Pacific");
 
   async function onCopy() {
-    if (!copyableAddress) return;
-    const result = await copyText(copyableAddress);
+    if (!address) return;
+    const result = await copyText(address);
     setCopyState(result);
     if (result === "fallback") {
       requestAnimationFrame(() => {
@@ -73,7 +72,7 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
             <dt>{row.label}</dt>
             <dd className={row.label === copy.fields.contract ? "contract-line" : undefined}>
               <span>{row.value}</span>
-              {row.label === copy.fields.contract && copyableAddress ? (
+              {row.label === copy.fields.contract ? (
                 <button
                   type="button"
                   className="copy-icon"

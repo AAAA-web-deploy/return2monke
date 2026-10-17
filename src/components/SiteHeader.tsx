@@ -52,7 +52,7 @@ export function SiteHeader({ site }: SiteHeaderProps) {
     { href: site.community.xUrl, label: "X", icon: <XIcon /> },
     { href: site.community.dextoolsUrl, label: "DEXTools", icon: <DextoolsIcon /> },
     { href: site.community.dexscreenerUrl, label: "DEXScreener", icon: <DexscreenerIcon /> },
-  ].filter((item) => item.href);
+  ];
 
   return (
     <header className="site-header">
@@ -91,16 +91,20 @@ export function SiteHeader({ site }: SiteHeaderProps) {
             </a>
           );
         })}
-        {socials.length > 0 ? (
-          <span className="header-socials">
-            {socials.map((item) => (
-              <a key={item.label} href={item.href ?? undefined} aria-label={item.label} target="_blank" rel="noopener noreferrer">
-                {item.icon}
-              </a>
-            ))}
-          </span>
-        ) : null}
       </nav>
+      <span className="header-socials">
+        {socials.map((item) =>
+          item.href ? (
+            <a key={item.label} href={item.href} aria-label={item.label} target="_blank" rel="noopener noreferrer">
+              {item.icon}
+            </a>
+          ) : (
+            <button key={item.label} type="button" aria-label={item.label}>
+              {item.icon}
+            </button>
+          ),
+        )}
+      </span>
     </header>
   );
 }
