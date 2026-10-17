@@ -50,3 +50,17 @@ Event updates require a source and a verification date. Preserve the historic ed
 
 Layout and motion are in `src/components/Landing.tsx` and `src/app/globals.css`. Metadata is in `src/app/layout.tsx`; staging robots rules are in `src/app/robots.ts`.
 Edit these for an explicitly requested layout, behavior, accessibility, or rendering change. Routine text/image updates should use the content and asset files.
+
+## Roadster rebuild
+
+The homepage reads `content/roadster-copy.json` and `content/story.json`. The meme page reads `content/gallery.json`. Image files stay in `config/assets.json` under the same ids (`meme-01-roadster`, `reaction-01-excited` through `reaction-06-deadpan`). Story beats keep `imageId: null` until original frames are supplied. Do not invent those frames or reuse meme files as story art.
+
+| Later change | Edit here |
+|---|---|
+| Hero, culture, token, or meme-page wording | `content/roadster-copy.json` |
+| Story beats | `content/story.json` |
+| Gallery order or captions | `content/gallery.json` |
+| Supplied story frame | Add the asset in `config/assets.json`, then set that beat's `imageId` |
+| History chapter | `content/history.json` |
+| Token name, ticker, supply, tax, ownership, LP | `config/site.json` |
+| Network, contract, chart, buy, explorer, social URLs | `config/site.json`; leave null until supplied |

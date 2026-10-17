@@ -67,7 +67,7 @@ export function HistoryStation({ copy, records, assets, initialYear }: HistorySt
             width={asset.width}
             height={asset.height}
             sizes="(max-width: 899px) 86vw, 440px"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto", objectFit: "contain" }}
           />
           <figcaption>{selected.object}</figcaption>
         </figure>
@@ -89,10 +89,6 @@ export function HistoryStation({ copy, records, assets, initialYear }: HistorySt
               {copy.verifiedLabel} {formatCalendarDate(selected.verifiedAt)}
             </p>
           </article>
-          <aside className="joke-sheet">
-            <h4>{copy.jokeLabel}</h4>
-            <p>{selected.joke}</p>
-          </aside>
         </div>
       </div>
     </div>

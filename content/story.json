@@ -1,0 +1,84 @@
+[
+  {
+    "id": "story-01-unveil",
+    "title": "Hop in.",
+    "speaker": "Elon",
+    "dialogue": "The future's here. Hop in.",
+    "description": "A fictional Elon caricature introduces the red Tesla Roadster. The two passengers are curious. The sailor monkey waits nearby.",
+    "imageId": null,
+    "artStatus": "original-approved-file-unavailable",
+    "aspectRatio": "16:9"
+  },
+  {
+    "id": "story-02-destination",
+    "title": "Destination: tomorrow.",
+    "speaker": "Elon",
+    "dialogue": "Next stop: the future.",
+    "screen": "TO THE FUTURE",
+    "description": "The destination is entered on the onboard computer. Keep the established cast and red open-top Roadster.",
+    "imageId": null,
+    "artStatus": "original-approved-file-unavailable",
+    "aspectRatio": "16:9"
+  },
+  {
+    "id": "story-03-override",
+    "title": "A small correction.",
+    "speaker": "Monkey",
+    "dialogue": "Lemme fix that.",
+    "description": "The monkey takes the driver's seat and mischievously changes the route. Preserve seating continuity and plausible hands.",
+    "imageId": null,
+    "artStatus": "original-approved-file-unavailable",
+    "aspectRatio": "16:9"
+  },
+  {
+    "id": "story-04-launch",
+    "title": "Questionable driver.",
+    "speaker": "Passenger",
+    "dialogue": "Uh... who let the monkey drive?",
+    "description": "The Roadster accelerates with comic speed lines. The humans react in surprise.",
+    "imageId": null,
+    "artStatus": "original-approved-file-unavailable",
+    "aspectRatio": "16:9"
+  },
+  {
+    "id": "story-05-kingdom",
+    "title": "The future looks familiar.",
+    "speaker": "Passengers",
+    "dialogue": "Wait... THIS is the future?!",
+    "description": "They arrive in an actual natural monkey habitat: wild trees, vines, rocks and river. All three humans are surprised and slightly frightened. No monkey village, huts, music stages, boats, bunting or human-like monkey activities.",
+    "imageId": null,
+    "artStatus": "original-approved-file-unavailable",
+    "aspectRatio": "16:9"
+  },
+  {
+    "id": "story-06-reveal",
+    "title": "Check the route.",
+    "speaker": null,
+    "dialogue": null,
+    "screen": "Return to Monke!!",
+    "description": "The computer command is the visual punchline. All three humans are shocked and look at the screen. The sailor monkey alone is pleased. Natural habitat beyond the cabin.",
+    "imageId": null,
+    "artStatus": "original-approved-file-unavailable",
+    "aspectRatio": "16:9"
+  },
+  {
+    "id": "story-07-uniform",
+    "title": "Back to basics.",
+    "speaker": "Monkey",
+    "dialogue": "Much better.",
+    "description": "The monkey tosses away his sailor outfit. The humans look bewildered, with no smiles. Natural fur-covered animal, no anatomical detail.",
+    "imageId": null,
+    "artStatus": "original-approved-file-unavailable",
+    "aspectRatio": "16:9"
+  },
+  {
+    "id": "story-08-finale",
+    "title": "Home, at last.",
+    "speaker": "Monkey",
+    "dialogue": "Return to Monke!!",
+    "description": "The naturally fur-covered monkey alone in the Roadster cheers the token name. No humans. Natural habitat, large Tesla T emblem.",
+    "imageId": null,
+    "artStatus": "original-approved-file-unavailable",
+    "aspectRatio": "16:9"
+  }
+]

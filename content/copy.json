@@ -52,7 +52,7 @@
     "copyLabel": "Copy contract",
     "copiedLabel": "Contract copied.",
     "copyFallback": "Clipboard access failed. Select the address and copy it manually.",
-    "contractNotice": "Coming soon...",
+    "contractNotice": "Contract to be confirmed",
     "fields": {
       "name": "Name",
       "ticker": "Ticker",

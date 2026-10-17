@@ -2,8 +2,8 @@
   "identity": {
     "name": "Return to Monke",
     "ticker": "$PUNCHSTER",
-    "description": "An independent meme-token concept inspired by ApeFest's art, music, and community.",
-    "independenceLine": "Independent community project inspired by ApeFest. No affiliation or endorsement is claimed.",
+    "description": "The future took a wrong turn. Return to Monke is the punchline.",
+    "independenceLine": "Fictional story. Not affiliated with ApeFest, BAYC, Yuga Labs, Tesla, or Elon Musk.",
     "logoAssetId": "brand-logo",
     "faviconAssetId": "brand-icon"
   },
@@ -49,7 +49,7 @@
   },
   "seo": {
     "title": null,
-    "description": "An original ape, an overflowing suitcase, and six editions of ApeFest culture.",
-    "socialImageAsset": "hero-arrival"
+    "description": "The future took a wrong turn. Return to Monke is the punchline.",
+    "socialImageAsset": "meme-01-roadster"
   }
 }

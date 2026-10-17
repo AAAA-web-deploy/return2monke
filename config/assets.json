@@ -84,5 +84,68 @@
     "width": 128,
     "height": 128,
     "version": 1
+  },
+  "meme-01-roadster": {
+    "src": "/images/meme-01-roadster-v1.webp",
+    "alt": "An unclothed monkey grips a buckling steering wheel while a red Roadster swerves in one forest lane.",
+    "width": 1536,
+    "height": 1024,
+    "version": 1
+  },
+  "meme-02-toy": {
+    "src": "/images/meme-02-toy-v1.webp",
+    "alt": "A physical-looking vinyl sailor-monkey doll drives a miniature red Roadster on a collectible display base.",
+    "width": 1536,
+    "height": 1024,
+    "version": 1
+  },
+  "meme-03-evolution": {
+    "src": "/images/meme-03-evolution-v1.webp",
+    "alt": "A continuous evolution procession leads to an instant return to a fur-covered monkey driving one Roadster.",
+    "width": 1536,
+    "height": 1024,
+    "version": 1
+  },
+  "reaction-01-excited": {
+    "src": "/images/reaction-01-excited-v1.webp",
+    "alt": "Excited monkey drivers in sailor clothing and natural fur, side by side.",
+    "width": 1536,
+    "height": 1024,
+    "version": 1
+  },
+  "reaction-02-shocked": {
+    "src": "/images/reaction-02-shocked-v1.webp",
+    "alt": "Two shocked monkey variants squeeze visibly bent steering wheels.",
+    "width": 1536,
+    "height": 1024,
+    "version": 1
+  },
+  "reaction-03-confused": {
+    "src": "/images/reaction-03-confused-v1.webp",
+    "alt": "Clothed and natural-fur monkey variants scratch their heads in confusion.",
+    "width": 1536,
+    "height": 1024,
+    "version": 1
+  },
+  "reaction-04-smug": {
+    "src": "/images/reaction-04-smug-v1.webp",
+    "alt": "Two monkey drivers smirk with half-lidded, self-satisfied expressions.",
+    "width": 1536,
+    "height": 1024,
+    "version": 1
+  },
+  "reaction-05-angry": {
+    "src": "/images/reaction-05-angry-v1.webp",
+    "alt": "Two furious monkey variants grip buckled steering wheels with clenched teeth.",
+    "width": 1536,
+    "height": 1024,
+    "version": 1
+  },
+  "reaction-06-deadpan": {
+    "src": "/images/reaction-06-deadpan-v1.webp",
+    "alt": "Two monkey drivers stare ahead with flat, unimpressed expressions.",
+    "width": 1536,
+    "height": 1024,
+    "version": 1
   }
 }

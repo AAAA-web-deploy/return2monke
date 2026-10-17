@@ -1,0 +1,25 @@
+{
+  "features": [
+    "meme-01-roadster",
+    "meme-02-toy",
+    "meme-03-evolution"
+  ],
+  "reactions": [
+    "reaction-01-excited",
+    "reaction-02-shocked",
+    "reaction-03-confused",
+    "reaction-04-smug",
+    "reaction-05-angry",
+    "reaction-06-deadpan"
+  ],
+  "reactionVariants": {
+    "left": "sailor outfit",
+    "right": "natural fur"
+  },
+  "captions": [
+    "ONE WRONG TURN.",
+    "NEXT STOP: MONKE.",
+    "THE GPS HAS QUESTIONS.",
+    "$PUNCHSTER"
+  ]
+}

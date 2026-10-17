@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "eyebrow": "RETURN TO MONKE / $PUNCHSTER",
+    "headline": "The future took a wrong turn.",
+    "body": "Elon promised tomorrow. One monkey changed the route. Next stop: the wild.",
+    "primaryCta": "Read the story",
+    "secondaryCta": "Enter the meme garage"
+  },
+  "story": {
+    "eyebrow": "A fictional wrong turn",
+    "heading": "He said the future. The monkey heard home.",
+    "bridge": "The story is fiction. The culture behind ApeFest is real."
+  },
+  "culture": {
+    "heading": "A club that became a gathering.",
+    "intro": "Art, shared jokes, familiar faces, and a reason to meet beyond the screen.",
+    "cards": [
+      {
+        "title": "The inside joke",
+        "body": "A shared character gives a community an easy place to start a conversation."
+      },
+      {
+        "title": "The reunion",
+        "body": "ApeFest brings an online club into a physical gathering."
+      },
+      {
+        "title": "The art",
+        "body": "Illustration, music, collaborations, and collectibles shape the event's visual culture."
+      },
+      {
+        "title": "The remix",
+        "body": "Our Roadster story is an independent comic remix of the return-to-monke idea."
+      }
+    ]
+  },
+  "history": {
+    "heading": "Six editions. A lot of stories.",
+    "intro": "Explore the event's history through short, sourced chapters."
+  },
+  "memes": {
+    "heading": "Evolution Took a Wrong Turn",
+    "intro": "Millions of years of progress. One very questionable driver.",
+    "featuresHeading": "The wrong-turn collection",
+    "reactionsHeading": "Pick your passenger mood",
+    "generatorHeading": "Make the next wrong turn",
+    "downloadLabel": "Download image",
+    "zoomLabel": "View full image"
+  },
+  "token": {
+    "heading": "Return to Monke",
+    "body": "The car was built for the future. The monkey had other plans.",
+    "nameLabel": "Token name",
+    "tickerLabel": "Ticker",
+    "networkPending": "Network to be confirmed",
+    "contractPending": "Contract to be confirmed",
+    "linksPending": "Links will appear when confirmed."
+  },
+  "footer": {
+    "credit": "An independent meme project.",
+    "notice": "Fictional story. Not affiliated with ApeFest, BAYC, Yuga Labs, Tesla, or Elon Musk."
+  }
+}

@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import type { CopyContent, SiteConfig } from "@/lib/types";
-import { contractDisplayValue, copyText, formatZonedTime } from "@/lib/presentation";
+import { contractCopyValue, contractDisplayValue, copyText, formatZonedTime } from "@/lib/presentation";
 
 type TokenDeskProps = {
   site: SiteConfig;
@@ -11,6 +11,7 @@ type TokenDeskProps = {
 
 export function TokenDesk({ site, copy }: TokenDeskProps) {
   const address = contractDisplayValue(site.token, copy.contractNotice);
+  const copyableAddress = contractCopyValue(site.token);
   const fallbackRef = useRef<HTMLTextAreaElement>(null);
   const [copyState, setCopyState] = useState<"idle" | "copied" | "fallback">("idle");
   const startEastern = formatZonedTime(site.event.startsAt, "America/New_York", "Eastern");
@@ -19,8 +20,8 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
   const endPacific = formatZonedTime(site.event.endsAt, "America/Los_Angeles", "Pacific");
 
   async function onCopy() {
-    if (!address) return;
-    const result = await copyText(address);
+    if (!copyableAddress) return;
+    const result = await copyText(copyableAddress);
     setCopyState(result);
     if (result === "fallback") {
       requestAnimationFrame(() => {
@@ -41,6 +42,7 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
   const rows: { label: string; value: string }[] = [
     { label: copy.fields.name, value: site.identity.name ?? "" },
     { label: copy.fields.ticker, value: site.identity.ticker ?? "" },
+    { label: copy.fields.network, value: site.token.network ?? "Network to be confirmed" },
     { label: copy.fields.supply, value: site.token.totalSupply ?? "" },
     { label: copy.fields.contract, value: address },
     { label: copy.fields.tax, value: site.token.taxInfo ?? "" },
@@ -71,7 +73,7 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
             <dt>{row.label}</dt>
             <dd className={row.label === copy.fields.contract ? "contract-line" : undefined}>
               <span>{row.value}</span>
-              {row.label === copy.fields.contract ? (
+              {row.label === copy.fields.contract && copyableAddress ? (
                 <button
                   type="button"
                   className="copy-icon"
