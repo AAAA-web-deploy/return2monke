@@ -41,7 +41,7 @@
     "productionBranch": "main",
     "productionDomain": "trogebob.world",
     "productionEnabled": false,
-    "stagingUrl": null
+    "stagingUrl": "https://trogebob.world"
   },
   "seo": {
     "title": null,
