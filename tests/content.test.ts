@@ -41,7 +41,7 @@ describe("shipped content", () => {
 
   it("keeps the logo, meme face, and favicon as separate ids", () => {
     const assets = bundle().assets as Record<string, { src: string }>;
-    expect(assets["brand-logo"].src).toBe(assets["reaction-deadpan"].src);
+    expect(assets["brand-logo"].src).not.toBe(assets["reaction-deadpan"].src);
     expect(assets["brand-icon"].src).not.toBe(assets["brand-logo"].src);
   });
 });

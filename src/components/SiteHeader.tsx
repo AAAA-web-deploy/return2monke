@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import type { SiteConfig } from "@/lib/types";
+import type { AssetRecord, SiteConfig } from "@/lib/types";
 
 type SiteHeaderProps = {
   site: SiteConfig;
+  logo: AssetRecord;
 };
 
 const NAV = [
@@ -16,7 +18,7 @@ const NAV = [
   { id: "token", label: "Token", hash: "#token" },
 ] as const;
 
-export function SiteHeader({ site }: SiteHeaderProps) {
+export function SiteHeader({ site, logo }: SiteHeaderProps) {
   const pathname = usePathname();
   const onMemes = pathname === "/memes" || pathname === "/memes/";
   const [open, setOpen] = useState(false);
@@ -57,6 +59,13 @@ export function SiteHeader({ site }: SiteHeaderProps) {
   return (
     <header className="site-header">
       <a className="brand" href={onMemes ? "/" : "/#story"}>
+        <Image
+          className="brand-logo"
+          src={logo.src}
+          alt=""
+          width={logo.width}
+          height={logo.height}
+        />
         <span className="brand-name">
           {name}
           <span className="ticker">{ticker}</span>

@@ -72,10 +72,17 @@
     "version": 1
   },
   "brand-logo": {
-    "src": "/images/reaction-deadpan-v1.webp",
-    "alt": "Original ape character logo.",
-    "width": 1254,
-    "height": 1254,
+    "src": "/images/brand-logo-v2.jpg",
+    "alt": "Return to Monke logo of a smiling monkey waving from a red car.",
+    "width": 1024,
+    "height": 1024,
+    "version": 2
+  },
+  "brand-banner": {
+    "src": "/images/brand-banner-v1.jpg",
+    "alt": "Return to Monke banner with a monkey driving a red car through the jungle and the $PUNCHSTER name.",
+    "width": 1024,
+    "height": 341,
     "version": 1
   },
   "brand-icon": {

@@ -16,7 +16,7 @@ export default function MemesPage() {
       <a className="skip-link" href="#gallery">
         Skip to the gallery
       </a>
-      <SiteHeader site={content.site} />
+      <SiteHeader site={content.site} logo={content.assets["brand-logo"]} />
       <main>
         <MemeGallery assets={content.assets} />
       </main>

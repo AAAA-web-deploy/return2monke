@@ -13,14 +13,14 @@ type LandingProps = {
 
 export function Landing({ content }: LandingProps) {
   const { site, assets, copy: labels, history } = content;
-  const hero = assets["meme-01-roadster"];
+  const hero = assets["brand-banner"];
 
   return (
     <>
       <a className="skip-link" href="#story">
         Skip to the story
       </a>
-      <SiteHeader site={site} />
+      <SiteHeader site={site} logo={assets["brand-logo"]} />
       <main>
         <section className="rd-hero" aria-labelledby="hero-heading">
           <div className="rd-hero-copy">
