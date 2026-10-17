@@ -11,7 +11,7 @@
     "status": "unannounced",
     "network": null,
     "chainId": null,
-    "contractAddress": null,
+    "contractAddress": "0xce8aebc121d7ae3a6cd07319234887985a5ee2ae",
     "pairAddress": null,
     "totalSupply": "1B",
     "chartUrl": null,
@@ -23,8 +23,8 @@
     "lpStatus": "Burn"
   },
   "community": {
-    "xUrl": null,
-    "telegramUrl": null,
+    "xUrl": "https://x.com/return__monke",
+    "telegramUrl": "https://t.me/return2monke_floorit",
     "dextoolsUrl": null,
     "dexscreenerUrl": null
   },

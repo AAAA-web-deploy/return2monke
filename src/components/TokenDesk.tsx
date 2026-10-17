@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import type { CopyContent, SiteConfig } from "@/lib/types";
-import { contractDisplayValue, copyText, formatZonedTime } from "@/lib/presentation";
+import { contractCopyValue, contractDisplayValue, copyText, formatZonedTime } from "@/lib/presentation";
 
 type TokenDeskProps = {
   site: SiteConfig;
@@ -50,7 +50,9 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
 
   return (
     <div className="desk">
-      {site.token.status !== "live" ? <p className="pending-intro">{copy.pendingText}</p> : null}
+      {site.token.status !== "live" && !contractCopyValue(site.token) ? (
+        <p className="pending-intro">{copy.pendingText}</p>
+      ) : null}
       <p className="independence">{site.identity.independenceLine}</p>
       <section className="event-card" aria-label={copy.eventTitle}>
         <h3>{copy.eventTitle}</h3>
