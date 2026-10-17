@@ -7,12 +7,7 @@ Automatic deploys go to the `staging` branch of https://github.com/AAAA-web-depl
 ## One-time account steps
 
 1. Sign in to GitHub on this computer for `AAAA-web-deploy/return2monke`. Use Git Credential Manager or the GitHub CLI. Do not paste a token into chat.
-2. Set your real Git author name and email. This repository will not invent one:
-
-   ```bash
-   git config --global user.name "Your Name"
-   git config --global user.email "you@example.com"
-   ```
+2. Author commits with your real Git identity when it is already configured. If `user.name` and `user.email` are not set, `npm run stage` uses the signed-in GitHub account that can push to this repository: its profile name, or its login, and its GitHub noreply address. It does not write Git config and it does not invent a person. A saved login that cannot push is not used for the push.
 
 3. In Vercel, create or select the staging project with the application at the repository root. Link it with the Vercel CLI (`vercel login`, then `vercel link`). That writes `.vercel/project.json` locally. That folder stays uncommitted.
 4. Add these repository Actions secrets in GitHub settings, using hidden input. Do not put the values in a file or in chat:
@@ -29,7 +24,7 @@ Automatic deploys go to the `staging` branch of https://github.com/AAAA-web-depl
 
 `npm run stage:check` runs the same checks and prints what would be committed.
 
-The `stop` hook in `.cursor/hooks.json` is a fallback for a finished Cursor task. It does nothing when Git identity is missing or a sync is already running.
+The `stop` hook in `.cursor/hooks.json` is a fallback for a finished Cursor task. It runs `npm run stage` when the checkout has something to publish and a sync is not already running. That command pushes `staging`, which starts the preview workflow.
 
 ## Production
 

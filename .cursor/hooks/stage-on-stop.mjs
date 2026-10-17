@@ -11,12 +11,10 @@ function git(args) {
   return spawnSync("git", args, { encoding: "utf8" });
 }
 
-const name = git(["config", "--get", "user.name"]).stdout?.trim();
-const email = git(["config", "--get", "user.email"]).stdout?.trim();
 const lockHeld = fs.existsSync(".cursor/.staging-sync/lock.json");
 
 let shouldStage = false;
-if (name && email && !lockHeld && !process.env.CURSOR_STAGE_FROM_HOOK) {
+if (!lockHeld && !process.env.CURSOR_STAGE_FROM_HOOK) {
   if (!fs.existsSync(".git")) {
     shouldStage = true;
   } else {
@@ -26,7 +24,8 @@ if (name && email && !lockHeld && !process.env.CURSOR_STAGE_FROM_HOOK) {
       shouldStage = true;
     } else {
       const counts = git(["rev-list", "--left-right", "--count", "origin/staging...HEAD"]);
-      shouldStage = counts.status !== 0 || !counts.stdout?.trim().startsWith("0");
+      const parts = (counts.stdout || "").trim().split(/\s+/);
+      shouldStage = counts.status !== 0 || parts[0] !== "0" || parts[1] !== "0";
     }
   }
 }
