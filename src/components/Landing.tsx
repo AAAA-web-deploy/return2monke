@@ -157,7 +157,6 @@ export function Landing({ content }: { content: ContentModel }) {
         </section>
 
         <section id="culture" className="section" aria-labelledby="culture-title">
-          <p className="eyebrow">{copy.culture.eyebrow}</p>
           <h2 id="culture-title" className="display">
             {copy.culture.heading.map((line) => (
               <span key={line}>{line}</span>
@@ -178,7 +177,6 @@ export function Landing({ content }: { content: ContentModel }) {
         </section>
 
         <section id="history" className="section" aria-labelledby="history-title">
-          <p className="eyebrow">{copy.history.eyebrow}</p>
           <h2 id="history-title" className="display">
             {copy.history.heading.map((line) => (
               <span key={line}>{line}</span>
@@ -189,7 +187,6 @@ export function Landing({ content }: { content: ContentModel }) {
         </section>
 
         <section id="memes" className="section" aria-labelledby="meme-title">
-          <p className="eyebrow">{copy.memes.eyebrow}</p>
           <h2 id="meme-title" className="display">
             {copy.memes.heading.map((line) => (
               <span key={line}>{line}</span>
@@ -200,7 +197,6 @@ export function Landing({ content }: { content: ContentModel }) {
         </section>
 
         <section id="token" className="section" aria-labelledby="token-title">
-          <p className="eyebrow">{copy.token.eyebrow}</p>
           <h2 id="token-title" className="display">
             {copy.token.heading.map((line) => (
               <span key={line}>{line}</span>
