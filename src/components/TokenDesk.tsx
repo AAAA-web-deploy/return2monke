@@ -41,7 +41,6 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
   const rows: { label: string; value: string }[] = [
     { label: copy.fields.name, value: site.identity.name ?? "" },
     { label: copy.fields.ticker, value: site.identity.ticker ?? "" },
-    { label: copy.fields.network, value: site.token.network ?? "Network to be confirmed" },
     { label: copy.fields.supply, value: site.token.totalSupply ?? "" },
     { label: copy.fields.contract, value: address },
     { label: copy.fields.tax, value: site.token.taxInfo ?? "" },
