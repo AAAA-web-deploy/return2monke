@@ -1,7 +1,7 @@
 {
   "identity": {
-    "name": null,
-    "ticker": null,
+    "name": "Return to Monke",
+    "ticker": "$PUNCHSTER",
     "description": "An independent meme-token concept inspired by ApeFest's art, music, and community.",
     "independenceLine": "Independent community project inspired by ApeFest. No affiliation or endorsement is claimed.",
     "logoAssetId": "brand-logo",
@@ -13,12 +13,14 @@
     "chainId": null,
     "contractAddress": null,
     "pairAddress": null,
-    "totalSupply": null,
+    "totalSupply": "1M",
     "chartUrl": null,
     "buyUrl": null,
     "explorerUrl": null,
-    "taxInfo": null,
-    "liquidityInfo": null
+    "taxInfo": "0%",
+    "liquidityInfo": null,
+    "ownership": "Renounce",
+    "lpStatus": "Burn"
   },
   "community": {
     "xUrl": null,

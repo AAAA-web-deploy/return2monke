@@ -21,6 +21,8 @@ export type SiteConfig = {
     explorerUrl: string | null;
     taxInfo: string | null;
     liquidityInfo: string | null;
+    ownership: string | null;
+    lpStatus: string | null;
   };
   community: {
     xUrl: string | null;
@@ -113,6 +115,7 @@ export type CopyContent = {
     copyLabel: string;
     copiedLabel: string;
     copyFallback: string;
+    contractNotice: string;
     fields: {
       name: string;
       ticker: string;
@@ -124,6 +127,8 @@ export type CopyContent = {
       supply: string;
       tax: string;
       liquidity: string;
+      ownership: string;
+      lpStatus: string;
       pending: string;
     };
     actions: {

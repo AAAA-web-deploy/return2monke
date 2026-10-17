@@ -3,6 +3,7 @@ import {
   canExport,
   completeRender,
   contractCopyValue,
+  contractDisplayValue,
   copyText,
   eventPhase,
   formatZonedTime,
@@ -62,6 +63,8 @@ describe("token presentation", () => {
     expect(contractCopyValue({ contractAddress: null, pairAddress: pair })).toBeNull();
     expect(contractCopyValue({ contractAddress: contract, pairAddress: pair })).toBe(contract);
     expect(contractCopyValue({ contractAddress: contract, pairAddress: contract })).toBeNull();
+    expect(contractDisplayValue({ contractAddress: null, pairAddress: pair }, "Coming soon...")).toBe("Coming soon...");
+    expect(contractDisplayValue({ contractAddress: contract, pairAddress: pair }, "Coming soon...")).toBe(contract);
   });
 
   it("falls back when the clipboard is unavailable and succeeds when it is", async () => {

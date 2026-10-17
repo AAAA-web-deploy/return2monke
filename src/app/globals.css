@@ -526,6 +526,30 @@ h2.display { font-size: clamp(2.4rem, 6vw, 4.6rem); }
 
 .token-row dd { margin: 0; }
 
+.contract-line {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.copy-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  color: var(--ink);
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.copy-icon svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
 .address { overflow-wrap: anywhere; font-family: ui-monospace, Consolas, monospace; }
 
 .copy-block textarea, .link-row { margin-top: 0.8rem; }

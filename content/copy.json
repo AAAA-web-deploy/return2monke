@@ -45,13 +45,14 @@
   "token": {
     "eyebrow": "04 / The token desk",
     "heading": ["ALL THE DETAILS.", "LESS DIGGING."],
-    "pendingText": "The project identity and launch details are still open. Confirmed information will appear here.",
+    "pendingText": "The contract address has not been published.",
     "eventTitle": "Gathering time",
     "eventNote": "These hours are for the ApeFest gathering. They are not a token launch time.",
     "launchNote": "No token launch time is confirmed.",
     "copyLabel": "Copy contract",
     "copiedLabel": "Contract copied.",
     "copyFallback": "Clipboard access failed. Select the address and copy it manually.",
+    "contractNotice": "Coming soon...",
     "fields": {
       "name": "Name",
       "ticker": "Ticker",
@@ -61,8 +62,10 @@
       "contract": "Contract",
       "pair": "Pair",
       "supply": "Supply",
-      "tax": "Tax",
+      "tax": "Buy/Sell Tax",
       "liquidity": "Liquidity",
+      "ownership": "Ownership",
+      "lpStatus": "LP Status",
       "pending": "Pending"
     },
     "actions": {

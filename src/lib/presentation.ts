@@ -25,6 +25,16 @@ export function contractCopyValue(token: {
   return token.contractAddress.trim();
 }
 
+export function contractDisplayValue(
+  token: {
+    contractAddress: string | null;
+    pairAddress: string | null;
+  },
+  notice: string,
+): string {
+  return contractCopyValue(token) ?? notice;
+}
+
 export async function copyText(value: string): Promise<"copied" | "fallback"> {
   try {
     if (!navigator.clipboard?.writeText) return "fallback";

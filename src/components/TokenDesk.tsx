@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import type { CopyContent, SiteConfig } from "@/lib/types";
-import { contractCopyValue, copyText, formatZonedTime } from "@/lib/presentation";
+import { contractDisplayValue, copyText, formatZonedTime } from "@/lib/presentation";
 
 type TokenDeskProps = {
   site: SiteConfig;
@@ -10,7 +10,7 @@ type TokenDeskProps = {
 };
 
 export function TokenDesk({ site, copy }: TokenDeskProps) {
-  const address = contractCopyValue(site.token);
+  const address = contractDisplayValue(site.token, copy.contractNotice);
   const fallbackRef = useRef<HTMLTextAreaElement>(null);
   const [copyState, setCopyState] = useState<"idle" | "copied" | "fallback">("idle");
   const startEastern = formatZonedTime(site.event.startsAt, "America/New_York", "Eastern");
@@ -38,18 +38,15 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
     site.community.telegramUrl ? { href: site.community.telegramUrl, label: copy.actions.telegram } : null,
   ].filter((link): link is { href: string; label: string } => link !== null);
 
-  const rows: { label: string; value: string | null; address?: boolean }[] = [
-    { label: copy.fields.name, value: site.identity.name },
-    { label: copy.fields.ticker, value: site.identity.ticker },
-    { label: copy.fields.status, value: copy.statuses[site.token.status] },
-    { label: copy.fields.network, value: site.token.network },
-    { label: copy.fields.chainId, value: site.token.chainId === null ? null : String(site.token.chainId) },
-    { label: copy.fields.contract, value: site.token.contractAddress, address: true },
-    { label: copy.fields.pair, value: site.token.pairAddress, address: true },
+  const rows: { label: string; value: string }[] = [
+    { label: copy.fields.name, value: site.identity.name ?? "" },
+    { label: copy.fields.ticker, value: site.identity.ticker ?? "" },
+    { label: copy.fields.supply, value: site.token.totalSupply ?? "" },
+    { label: copy.fields.contract, value: address },
+    { label: copy.fields.tax, value: site.token.taxInfo ?? "" },
+    { label: copy.fields.ownership, value: site.token.ownership ?? "" },
+    { label: copy.fields.lpStatus, value: site.token.lpStatus ?? "" },
   ];
-  if (site.token.totalSupply) rows.push({ label: copy.fields.supply, value: site.token.totalSupply });
-  if (site.token.taxInfo) rows.push({ label: copy.fields.tax, value: site.token.taxInfo });
-  if (site.token.liquidityInfo) rows.push({ label: copy.fields.liquidity, value: site.token.liquidityInfo });
 
   return (
     <div className="desk">
@@ -72,25 +69,28 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
         {rows.map((row) => (
           <div key={row.label} className="token-row">
             <dt>{row.label}</dt>
-            <dd className={row.value && row.address ? "address" : undefined}>
-              {row.value ?? <span className="pending">{copy.fields.pending}</span>}
+            <dd className={row.label === copy.fields.contract ? "contract-line" : undefined}>
+              <span>{row.value}</span>
+              {row.label === copy.fields.contract ? (
+                <button
+                  type="button"
+                  className="copy-icon"
+                  onClick={onCopy}
+                  aria-label={copyState === "copied" ? copy.copiedLabel : copy.copyLabel}
+                >
+                  {copyState === "copied" ? <CheckMark /> : <CopySquares />}
+                </button>
+              ) : null}
             </dd>
           </div>
         ))}
       </dl>
-      {address ? (
-        <div className="copy-block">
-          <button type="button" className="button button-yellow" onClick={onCopy}>
-            {copy.copyLabel}
-          </button>
-          <p role="status" aria-live="polite">
-            {copyState === "copied" ? copy.copiedLabel : null}
-            {copyState === "fallback" ? copy.copyFallback : null}
-          </p>
-          {copyState === "fallback" ? (
-            <textarea ref={fallbackRef} readOnly value={address} aria-label={copy.fields.contract} rows={2} />
-          ) : null}
-        </div>
+      <p className="sr-only" role="status" aria-live="polite">
+        {copyState === "copied" ? copy.copiedLabel : null}
+        {copyState === "fallback" ? copy.copyFallback : null}
+      </p>
+      {copyState === "fallback" ? (
+        <textarea ref={fallbackRef} readOnly value={address} aria-label={copy.fields.contract} rows={2} />
       ) : null}
       {links.length > 0 ? (
         <div className="link-row">
@@ -102,5 +102,22 @@ export function TokenDesk({ site, copy }: TokenDeskProps) {
         </div>
       ) : null}
     </div>
+  );
+}
+
+function CopySquares() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="12" height="12" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+      <rect x="9" y="9" width="12" height="12" rx="2" fill="var(--yellow)" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function CheckMark() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M5 12.5 10 17.5 19 7" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }

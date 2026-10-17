@@ -147,7 +147,7 @@ export function validateContent(input: ValidationInput): string[] {
   if (token.chainId !== null && (!Number.isInteger(token.chainId) || Number(token.chainId) <= 0)) {
     errors.push("token.chainId must be a positive integer or null");
   }
-  for (const field of ["contractAddress", "pairAddress", "totalSupply", "taxInfo", "liquidityInfo"] as const) {
+  for (const field of ["contractAddress", "pairAddress", "totalSupply", "taxInfo", "liquidityInfo", "ownership", "lpStatus"] as const) {
     nullableString(errors, token[field], `token.${field}`);
   }
   for (const field of ["contractAddress", "pairAddress"] as const) {
@@ -348,7 +348,7 @@ function validateCopy(errors: string[], copy: Record<string, unknown>) {
   }
   requiredString(errors, token.eyebrow, "copy.token.eyebrow");
   stringList(errors, token.heading, "copy.token.heading");
-  for (const key of ["pendingText", "eventTitle", "eventNote", "launchNote", "copyLabel", "copiedLabel", "copyFallback"]) {
+  for (const key of ["pendingText", "eventTitle", "eventNote", "launchNote", "copyLabel", "copiedLabel", "copyFallback", "contractNotice"]) {
     requiredString(errors, token[key], `copy.token.${key}`);
   }
   for (const group of ["fields", "actions", "statuses", "phases"] as const) {
