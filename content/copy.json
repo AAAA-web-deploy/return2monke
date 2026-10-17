@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "skip": "Skip to the story",
+    "culture": "Culture",
+    "history": "Years",
+    "memes": "Memes",
+    "token": "Token"
+  },
+  "hero": {
+    "headline": ["PACKED FOR", "ONE NIGHT."],
+    "subheading": "Somehow brought the whole festival.",
+    "primaryLabel": "Unpack the years",
+    "secondaryLabel": "Token details"
+  },
+  "culture": {
+    "eyebrow": "01 / The culture",
+    "heading": ["A GOOD EXCUSE", "TO GET TOGETHER."],
+    "introduction": "ApeFest is the annual gathering of the Bored Ape Yacht Club (BAYC) community, mixing music, art, merchandise, and meetups. Our fictional ape brings a little too much luggage.",
+    "items": [
+      {"title": "Music", "text": "The sets, the late nights, and the song everyone remembers."},
+      {"title": "Art", "text": "Characters, collecting, and a shared appetite for the unusual."},
+      {"title": "Style", "text": "The clothes, patches, and souvenirs that carry a story home."},
+      {"title": "People", "text": "Online friendships becoming real-world memories."}
+    ]
+  },
+  "history": {
+    "eyebrow": "02 / Unpack the years",
+    "heading": ["EVERY SOUVENIR", "HAS A STORY."],
+    "introduction": "Six editions, from New York to Charleston. Pick a souvenir for the real history and our ape's fictional excuse.",
+    "factLabel": "Recorded history",
+    "jokeLabel": "Fictional excuse",
+    "sourceLabel": "Official source",
+    "verifiedLabel": "Verified"
+  },
+  "memes": {
+    "eyebrow": "03 / Take a reaction home",
+    "heading": ["HE'S GOT", "AN EXCUSE."],
+    "introduction": "No festival knowledge required. Pick his face and his line, then save a reaction for your group chat.",
+    "saveLabel": "Save meme",
+    "renderingLabel": "Rendering the meme",
+    "expressionLabel": "His face",
+    "captionLabel": "His line",
+    "privacy": "Saves a picture on this device. No wallet or account."
+  },
+  "token": {
+    "eyebrow": "04 / The token desk",
+    "heading": ["ALL THE DETAILS.", "LESS DIGGING."],
+    "pendingText": "The project identity and launch details are still open. Confirmed information will appear here.",
+    "eventTitle": "Gathering time",
+    "eventNote": "These hours are for the ApeFest gathering. They are not a token launch time.",
+    "launchNote": "No token launch time is confirmed.",
+    "copyLabel": "Copy contract",
+    "copiedLabel": "Contract copied.",
+    "copyFallback": "Clipboard access failed. Select the address and copy it manually.",
+    "fields": {
+      "name": "Name",
+      "ticker": "Ticker",
+      "status": "Status",
+      "network": "Network",
+      "chainId": "Chain ID",
+      "contract": "Contract",
+      "pair": "Pair",
+      "supply": "Supply",
+      "tax": "Tax",
+      "liquidity": "Liquidity",
+      "pending": "Pending"
+    },
+    "actions": {
+      "chart": "Chart",
+      "buy": "Buy",
+      "explorer": "Explorer",
+      "x": "X",
+      "telegram": "Telegram"
+    },
+    "statuses": {
+      "unannounced": "Unannounced",
+      "announced": "Announced",
+      "live": "Live"
+    },
+    "phases": {
+      "upcoming": "Coming up",
+      "live": "Happening now",
+      "ended": "Wrapped"
+    }
+  },
+  "footer": {
+    "fictionLine": "The character and souvenirs are fictional; historical chapters link to official sources."
+  }
+}

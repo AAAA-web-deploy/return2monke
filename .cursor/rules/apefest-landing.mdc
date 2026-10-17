@@ -1,0 +1,14 @@
+---
+description: Content, artwork, and staging rules for the ApeFest arrival page
+alwaysApply: true
+---
+
+# ApeFest arrival page
+
+- Preserve `brief/`. It is the design reference, not the running app.
+- Change copy, history, memes, token fields, and asset paths in `config/` and `content/`. Follow `brief/UPDATE_MAP.md`.
+- Keep token name, ticker, network, contract, pair, and links null until they are supplied. Never derive them from return2monke or trogebob.world.
+- Keep `brand-logo`, meme reaction ids, and `brand-icon` separate.
+- Layout and motion live in `src/components/Landing.tsx` and `src/app/globals.css`. Leave them alone for a text or image update.
+- After a completed task, run `npm run stage`. It checks, commits, and pushes `staging` only. Never force-push, commit secrets, or deploy with `--prod`.
+- If Git identity or Vercel secrets are missing, keep the build and name the exact account step. Do not invent an author identity or ask for secret values in chat.

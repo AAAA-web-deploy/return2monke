@@ -1,0 +1,109 @@
+name: Staging preview
+
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vercel-preview-staging
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    if: github.ref == 'refs/heads/staging'
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ENV: preview
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: Check out staging
+        uses: actions/checkout@v7.0.1
+        with:
+          ref: staging
+          fetch-depth: 0
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Require Vercel secrets
+        run: |
+          set -euo pipefail
+          missing=0
+          if [ -z "${VERCEL_TOKEN}" ]; then
+            echo "::error::Missing GitHub Actions secret VERCEL_TOKEN"
+            missing=1
+          fi
+          if [ -z "${VERCEL_ORG_ID}" ]; then
+            echo "::error::Missing GitHub Actions secret VERCEL_ORG_ID"
+            missing=1
+          fi
+          if [ -z "${VERCEL_PROJECT_ID}" ]; then
+            echo "::error::Missing GitHub Actions secret VERCEL_PROJECT_ID"
+            missing=1
+          fi
+          exit "$missing"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Vercel CLI 64.5.0
+        run: npm install --global vercel@64.5.0
+
+      - name: Validate content
+        run: npm run validate
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Pull preview settings
+        run: vercel pull --yes --environment=preview
+
+      - name: Build preview
+        run: vercel build
+
+      - name: Skip when a newer staging commit exists
+        id: tip
+        run: |
+          set -euo pipefail
+          git fetch origin staging
+          tip="$(git rev-parse origin/staging)"
+          if [ "$tip" != "$GITHUB_SHA" ]; then
+            echo "current=false" >> "$GITHUB_OUTPUT"
+            echo "A newer staging commit ($tip) supersedes $GITHUB_SHA. Skipping deploy."
+          else
+            echo "current=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy preview
+        id: deploy
+        if: steps.tip.outputs.current == 'true'
+        run: |
+          set -euo pipefail
+          output="$(vercel deploy --prebuilt --yes)"
+          printf '%s\n' "$output"
+          url="$(printf '%s\n' "$output" | grep -Eo 'https://[^ ]+' | tail -n 1)"
+          if [ -z "$url" ]; then
+            echo "::error::Vercel did not return a preview URL"
+            exit 1
+          fi
+          echo "preview_url=$url" >> "$GITHUB_OUTPUT"
+          {
+            echo "### Staging preview"
+            echo "- Commit: \`$GITHUB_SHA\`"
+            echo "- URL: $url"
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "VERCEL_PREVIEW_URL=$url" >> "$GITHUB_ENV"

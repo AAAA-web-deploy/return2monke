@@ -1,0 +1,8 @@
+{
+  "reactions": [
+    {"id":"deadpan","label":"Acting normal","assetId":"reaction-deadpan"},
+    {"id":"confused","label":"Lost something","assetId":"reaction-confused"},
+    {"id":"delighted","label":"Found the party","assetId":"reaction-delighted"}
+  ],
+  "captions": ["I PACKED LIGHT.", "IT'S IN HERE. SOMEWHERE.", "ACT NORMAL."]
+}

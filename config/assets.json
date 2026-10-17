@@ -1,0 +1,88 @@
+{
+  "hero-arrival": {
+    "src": "/images/hero-arrival-v1.webp",
+    "alt": "An original ape sits on an overflowing yellow suitcase outside a fictional Charleston art venue.",
+    "width": 1672,
+    "height": 941,
+    "desktopFocus": "50% 50%",
+    "mobileFocus": "80% 50%",
+    "version": 1
+  },
+  "reaction-deadpan": {
+    "src": "/images/reaction-deadpan-v1.webp",
+    "alt": "The original ape trying to act normal.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "reaction-confused": {
+    "src": "/images/reaction-confused-v1.webp",
+    "alt": "The original ape looking endearingly confused.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "reaction-delighted": {
+    "src": "/images/reaction-delighted-v1.webp",
+    "alt": "The original ape with a delighted grin.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "souvenir-2021-boat": {
+    "src": "/images/souvenir-2021-boat-v1.webp",
+    "alt": "A fictional folded paper boat representing the first ApeFest chapter.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "souvenir-2022-ticket": {
+    "src": "/images/souvenir-2022-ticket-v1.webp",
+    "alt": "A fictional concert ticket representing the 2022 chapter.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "souvenir-2023-patch": {
+    "src": "/images/souvenir-2023-patch-v1.webp",
+    "alt": "An original illustrated clothing patch representing the Hong Kong chapter.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "souvenir-2024-postcard": {
+    "src": "/images/souvenir-2024-postcard-v1.webp",
+    "alt": "A fictional Lisbon travel postcard.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "souvenir-2025-key": {
+    "src": "/images/souvenir-2025-key-v1.webp",
+    "alt": "A fictional hotel key tag representing Las Vegas.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "souvenir-2026-print": {
+    "src": "/images/souvenir-2026-print-v1.webp",
+    "alt": "An original art print representing the Charleston chapter.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "brand-logo": {
+    "src": "/images/reaction-deadpan-v1.webp",
+    "alt": "Original ape character logo.",
+    "width": 1254,
+    "height": 1254,
+    "version": 1
+  },
+  "brand-icon": {
+    "src": "/images/brand-icon-v1.png",
+    "alt": "Original ape character icon.",
+    "width": 128,
+    "height": 128,
+    "version": 1
+  }
+}

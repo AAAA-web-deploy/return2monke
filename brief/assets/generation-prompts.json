@@ -1,0 +1,52 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "artwork/originals/hero-arrival-v1.png",
+  "referenceRole": "Approved original character/style reference",
+  "images": [
+    {
+      "assetId": "souvenir-2021-boat",
+      "prompt": "Derive one isolated website asset from the supplied reference illustration. Match its hand-inked editorial comic style, warm cream highlights, midnight-ink outlines, coral, mustard yellow and restrained petrol teal, subtle painted dimensional shading and irregular print texture. Transparent alpha background; isolated centered object, full silhouette inside canvas with comfortable 12 percent margins. No floor, backdrop, cast of characters, letters, dates, numbers, logos, watermarks, official NFT emblems or border. This is fictional original website art, not actual official merchandise.\nSubject: A charming folded cream paper boat, three-quarter view, a couple of soft creases and a tiny teal painted stripe, tactile paper construction. One boat only.\nAsset use: square isolated souvenir illustration for a history selector.",
+      "transparentBackground": true
+    },
+    {
+      "assetId": "souvenir-2022-ticket",
+      "prompt": "Derive one isolated website asset from the supplied reference illustration. Match its hand-inked editorial comic style, warm cream highlights, midnight-ink outlines, coral, mustard yellow and restrained petrol teal, subtle painted dimensional shading and irregular print texture. Transparent alpha background; isolated centered object, full silhouette inside canvas with comfortable 12 percent margins. No floor, backdrop, cast of characters, letters, dates, numbers, logos, watermarks, official NFT emblems or border. This is fictional original website art, not actual official merchandise.\nSubject: One slightly crumpled coral and mustard concert admission ticket with perforated short edges, blank cream fields and abstract ink lines; tilted a little. Absolutely no text, letters, numerals or barcode.\nAsset use: square isolated souvenir illustration for a history selector.",
+      "transparentBackground": true
+    },
+    {
+      "assetId": "souvenir-2023-patch",
+      "prompt": "Derive one isolated website asset from the supplied reference illustration. Match its hand-inked editorial comic style, warm cream highlights, midnight-ink outlines, coral, mustard yellow and restrained petrol teal, subtle painted dimensional shading and irregular print texture. Transparent alpha background; isolated centered object, full silhouette inside canvas with comfortable 12 percent margins. No floor, backdrop, cast of characters, letters, dates, numbers, logos, watermarks, official NFT emblems or border. This is fictional original website art, not actual official merchandise.\nSubject: One embroidered circular petrol-teal clothing patch with a simple original brown ape face motif matching the reference ape, coral stitched rim, visible thread texture. One patch only, no official mark or text.\nAsset use: square isolated souvenir illustration for a history selector.",
+      "transparentBackground": true
+    },
+    {
+      "assetId": "souvenir-2024-postcard",
+      "prompt": "Derive one isolated website asset from the supplied reference illustration. Match its hand-inked editorial comic style, warm cream highlights, midnight-ink outlines, coral, mustard yellow and restrained petrol teal, subtle painted dimensional shading and irregular print texture. Transparent alpha background; isolated centered object, full silhouette inside canvas with comfortable 12 percent margins. No floor, backdrop, cast of characters, letters, dates, numbers, logos, watermarks, official NFT emblems or border. This is fictional original website art, not actual official merchandise.\nSubject: One cream travel postcard depicting a small original illustration of pastel Lisbon-style tiled buildings under a warm sky, a mustard border and gently worn corners, slightly tilted. No writing, stamps with numerals, or labels.\nAsset use: square isolated souvenir illustration for a history selector.",
+      "transparentBackground": true
+    },
+    {
+      "assetId": "souvenir-2025-key",
+      "prompt": "Derive one isolated website asset from the supplied reference illustration. Match its hand-inked editorial comic style, warm cream highlights, midnight-ink outlines, coral, mustard yellow and restrained petrol teal, subtle painted dimensional shading and irregular print texture. Transparent alpha background; isolated centered object, full silhouette inside canvas with comfortable 12 percent margins. No floor, backdrop, cast of characters, letters, dates, numbers, logos, watermarks, official NFT emblems or border. This is fictional original website art, not actual official merchandise.\nSubject: One hot-coral vintage hotel key tag with a small brass ring and a tiny simple brass key, petrol-teal painted star shape on the tag. One connected key-tag assembly, no writing or numerals.\nAsset use: square isolated souvenir illustration for a history selector.",
+      "transparentBackground": true
+    },
+    {
+      "assetId": "souvenir-2026-print",
+      "prompt": "Derive one isolated website asset from the supplied reference illustration. Match its hand-inked editorial comic style, warm cream highlights, midnight-ink outlines, coral, mustard yellow and restrained petrol teal, subtle painted dimensional shading and irregular print texture. Transparent alpha background; isolated centered object, full silhouette inside canvas with comfortable 12 percent margins. No floor, backdrop, cast of characters, letters, dates, numbers, logos, watermarks, official NFT emblems or border. This is fictional original website art, not actual official merchandise.\nSubject: One small art print on thick cream paper, its top corner gently curled; inside is a bold abstract painted composition in coral, mustard, teal and midnight ink suggesting a playful ape silhouette. No words, labels or external frame.\nAsset use: square isolated souvenir illustration for a history selector.",
+      "transparentBackground": true
+    },
+    {
+      "assetId": "reaction-deadpan",
+      "prompt": "Derive one isolated website asset from the supplied reference illustration. Match its hand-inked editorial comic style, warm cream highlights, midnight-ink outlines, coral, mustard yellow and restrained petrol teal, subtle painted dimensional shading and irregular print texture. Transparent alpha background; isolated centered object, full silhouette inside canvas with comfortable 12 percent margins. No floor, backdrop, cast of characters, letters, dates, numbers, logos, watermarks, official NFT emblems or border. This is fictional original website art, not actual official merchandise.\nSubject: A head-and-shoulders portrait of EXACTLY the original brown ape from the reference, coral-orange plain T-shirt, the same muzzle, ears, eyebrow shape, fur and eye proportions. Expression: deadpan sideways glance, trying to act completely normal. Preserve identity. One ape bust only, centered with all hair and ears intact; lower shoulders finish cleanly at canvas edge. No suitcase or props.\nAsset use: square character reaction portrait; also suitable for a circular avatar mask.",
+      "transparentBackground": true
+    },
+    {
+      "assetId": "reaction-confused",
+      "prompt": "Derive one isolated website asset from the supplied reference illustration. Match its hand-inked editorial comic style, warm cream highlights, midnight-ink outlines, coral, mustard yellow and restrained petrol teal, subtle painted dimensional shading and irregular print texture. Transparent alpha background; isolated centered object, full silhouette inside canvas with comfortable 12 percent margins. No floor, backdrop, cast of characters, letters, dates, numbers, logos, watermarks, official NFT emblems or border. This is fictional original website art, not actual official merchandise.\nSubject: A head-and-shoulders portrait of EXACTLY the original brown ape from the reference, coral-orange plain T-shirt, the same muzzle, ears, eyebrow shape, fur and eye proportions. Expression: endearingly baffled, one eyebrow raised, eyes glancing down, mouth slightly open as if he lost his charger. Preserve identity. One ape bust only, centered with all hair and ears intact; lower shoulders finish cleanly at canvas edge. No suitcase or props.\nAsset use: square character reaction portrait; also suitable for a circular avatar mask.",
+      "transparentBackground": true
+    },
+    {
+      "assetId": "reaction-delighted",
+      "prompt": "Derive one isolated website asset from the supplied reference illustration. Match its hand-inked editorial comic style, warm cream highlights, midnight-ink outlines, coral, mustard yellow and restrained petrol teal, subtle painted dimensional shading and irregular print texture. Transparent alpha background; isolated centered object, full silhouette inside canvas with comfortable 12 percent margins. No floor, backdrop, cast of characters, letters, dates, numbers, logos, watermarks, official NFT emblems or border. This is fictional original website art, not actual official merchandise.\nSubject: A head-and-shoulders portrait of EXACTLY the original brown ape from the reference, coral-orange plain T-shirt, the same muzzle, ears, eyebrow shape, fur and eye proportions. Expression: sudden delighted grin with bright widened eyes, charming and a little ridiculous. Preserve identity. One ape bust only, centered with all hair and ears intact; lower shoulders finish cleanly at canvas edge. No suitcase or props.\nAsset use: square character reaction portrait; also suitable for a circular avatar mask.",
+      "transparentBackground": true
+    }
+  ]
+}
