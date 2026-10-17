@@ -24,7 +24,9 @@
   },
   "community": {
     "xUrl": null,
-    "telegramUrl": null
+    "telegramUrl": null,
+    "dextoolsUrl": null,
+    "dexscreenerUrl": null
   },
   "event": {
     "name": "ApeFest",

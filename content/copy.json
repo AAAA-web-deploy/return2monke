@@ -73,7 +73,9 @@
       "buy": "Buy",
       "explorer": "Explorer",
       "x": "X",
-      "telegram": "Telegram"
+      "telegram": "Telegram",
+      "dextools": "DEXTools",
+      "dexscreener": "DEXScreener"
     },
     "statuses": {
       "unannounced": "Unannounced",

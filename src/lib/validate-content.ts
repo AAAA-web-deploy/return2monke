@@ -168,6 +168,8 @@ export function validateContent(input: ValidationInput): string[] {
   optionalUrl(errors, token.explorerUrl, "token.explorerUrl");
   optionalUrl(errors, community.xUrl, "community.xUrl");
   optionalUrl(errors, community.telegramUrl, "community.telegramUrl");
+  optionalUrl(errors, community.dextoolsUrl, "community.dextoolsUrl");
+  optionalUrl(errors, community.dexscreenerUrl, "community.dexscreenerUrl");
 
   if (token.status === "live") {
     requiredString(errors, identity.name, "identity.name");

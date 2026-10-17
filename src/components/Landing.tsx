@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, type CSSProperties, type MouseEvent } from "react";
+import { useEffect, useState, type CSSProperties, type MouseEvent, type ReactNode } from "react";
 import { HistoryStation } from "@/components/HistoryStation";
 import { MemeStation } from "@/components/MemeStation";
 import { TokenDesk } from "@/components/TokenDesk";
@@ -67,6 +67,20 @@ export function Landing({ content }: { content: ContentModel }) {
           <a href="#memes">{copy.nav.memes}</a>
           <a href="#token">{copy.nav.token}</a>
         </nav>
+        <div className="header-socials">
+          <HeaderIcon href={site.community.telegramUrl} label={copy.token.actions.telegram}>
+            <TelegramIcon />
+          </HeaderIcon>
+          <HeaderIcon href={site.community.xUrl} label={copy.token.actions.x}>
+            <XIcon />
+          </HeaderIcon>
+          <HeaderIcon href={site.community.dextoolsUrl} label={copy.token.actions.dextools}>
+            <DextoolsIcon />
+          </HeaderIcon>
+          <HeaderIcon href={site.community.dexscreenerUrl} label={copy.token.actions.dexscreener}>
+            <DexscreenerIcon />
+          </HeaderIcon>
+        </div>
         <a className="button button-yellow header-token" href="#token">
           {copy.hero.secondaryLabel}
         </a>
@@ -200,5 +214,55 @@ export function Landing({ content }: { content: ContentModel }) {
         <p>{copy.footer.fictionLine}</p>
       </footer>
     </>
+  );
+}
+
+function HeaderIcon({ href, label, children }: { href: string | null; label: string; children: ReactNode }) {
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <button type="button" aria-label={label}>
+      {children}
+    </button>
+  );
+}
+
+function TelegramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M21.2 4.4 2.9 11.5c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 10.8-6.8c.5-.3 1-.1.6.3l-8.7 7.9-.3 4.7c.5 0 .7-.2 1-.5l2.4-2.3 5 3.7c.9.5 1.6.2 1.8-.9l2.2-14.1c.3-1.3-.5-1.9-1.6-1.5Z" />
+    </svg>
+  );
+}
+
+function XIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M4 4h3.6l4.1 5.7L16.2 4H20l-6.2 7.3L20.4 20h-3.6l-4.5-6.2L7.6 20H3.6l6.6-7.8L4 4Z" />
+    </svg>
+  );
+}
+
+function DextoolsIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 16.5 9 11l3.2 3.2L20 6.5" />
+      <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M14 6.5h6v6" />
+    </svg>
+  );
+}
+
+function DexscreenerIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M4 14h2.2v6H4zm4-5h2.2v11H8zm4-4h2.2v15H12z" />
+      <circle cx="17.2" cy="8.2" r="3" fill="none" stroke="currentColor" strokeWidth="2" />
+      <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="m19.5 10.5 2.2 2.2" />
+    </svg>
   );
 }

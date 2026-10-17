@@ -27,6 +27,8 @@ export type SiteConfig = {
   community: {
     xUrl: string | null;
     telegramUrl: string | null;
+    dextoolsUrl: string | null;
+    dexscreenerUrl: string | null;
   };
   event: {
     name: string;
@@ -137,6 +139,8 @@ export type CopyContent = {
       explorer: string;
       x: string;
       telegram: string;
+      dextools: string;
+      dexscreener: string;
     };
     statuses: Record<TokenStatus, string>;
     phases: Record<EventPhase, string>;
