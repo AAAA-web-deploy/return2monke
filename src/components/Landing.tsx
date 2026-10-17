@@ -23,24 +23,9 @@ export function Landing({ content }: LandingProps) {
       <SiteHeader site={site} logo={assets["brand-logo"]} />
       <main>
         <section className="rd-hero" aria-labelledby="hero-heading">
-          <div className="rd-hero-copy">
-            <p className="eyebrow">{copy.hero.eyebrow}</p>
-            <h1 id="hero-heading" className="display">
-              {copy.hero.headline}
-            </h1>
-            <p className="lede">{copy.hero.body}</p>
-            <p className="identity-line">
-              {site.identity.name} <span>{site.identity.ticker}</span>
-            </p>
-            <div className="hero-actions">
-              <a className="button" href="#story">
-                {copy.hero.primaryCta}
-              </a>
-              <a className="button button-ink" href="/memes">
-                {copy.hero.secondaryCta}
-              </a>
-            </div>
-          </div>
+          <h1 id="hero-heading" className="sr-only">
+            {copy.hero.headline}
+          </h1>
           <HeroArt>
             <Image
               src={hero.src}
@@ -48,10 +33,18 @@ export function Landing({ content }: LandingProps) {
               width={hero.width}
               height={hero.height}
               loading="eager"
-              sizes="(max-width: 899px) 100vw, 58vw"
+              sizes="100vw"
               style={{ width: "100%", height: "auto", objectFit: "contain" }}
             />
           </HeroArt>
+          <div className="hero-actions">
+            <a className="button" href="#story">
+              {copy.hero.primaryCta}
+            </a>
+            <a className="button button-ink" href="/memes">
+              {copy.hero.secondaryCta}
+            </a>
+          </div>
         </section>
 
         <StoryBoard />

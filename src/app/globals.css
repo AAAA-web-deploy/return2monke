@@ -680,8 +680,7 @@ h2.display { font-size: clamp(2.4rem, 6vw, 4.6rem); }
 
 .rd-hero {
   display: grid;
-  gap: 1.25rem;
-  align-items: center;
+  gap: 1rem;
   margin-top: 1.25rem;
 }
 
@@ -804,7 +803,7 @@ h2.display { font-size: clamp(2.4rem, 6vw, 4.6rem); }
 }
 
 @media (min-width: 900px) {
-  .rd-hero { grid-template-columns: 5fr 7fr; }
+  .rd-hero { grid-template-columns: 1fr; }
   .story-grid, .culture-grid { grid-template-columns: repeat(4, 1fr); }
   .reaction-grid { grid-template-columns: repeat(3, 1fr); }
   .caption-layout { grid-template-columns: 0.8fr 1.2fr; align-items: start; }
