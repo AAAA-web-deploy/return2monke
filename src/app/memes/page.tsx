@@ -20,10 +20,6 @@ export default function MemesPage() {
       <main>
         <MemeGallery assets={content.assets} />
       </main>
-      <footer className="site-footer">
-        <p>{copy.footer.credit}</p>
-        <p>{copy.footer.notice}</p>
-      </footer>
     </>
   );
 }

@@ -26,6 +26,14 @@ export function Landing({ content }: LandingProps) {
           <h1 id="hero-heading" className="sr-only">
             {copy.hero.headline}
           </h1>
+          <p className="hero-place">
+            <span>
+              {site.event.city}, {site.event.region}
+            </span>
+            <span>
+              {site.event.name} weekend · {site.event.edition}
+            </span>
+          </p>
           <HeroArt>
             <Image
               src={hero.src}
@@ -74,10 +82,6 @@ export function Landing({ content }: LandingProps) {
           <TokenDesk site={site} copy={labels.token} />
         </section>
       </main>
-      <footer className="site-footer">
-        <p>{copy.footer.credit}</p>
-        <p>{copy.footer.notice}</p>
-      </footer>
     </>
   );
 }
