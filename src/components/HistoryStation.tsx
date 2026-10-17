@@ -38,10 +38,9 @@ export function HistoryStation({ copy, records, assets, initialYear }: HistorySt
 
   return (
     <div className="history-layout">
-      <div role="tablist" aria-label={copy.heading.join(" ")} className="year-gallery" onKeyDown={onKeyDown}>
+      <div role="tablist" aria-label={copy.heading.join(" ")} className="year-list" onKeyDown={onKeyDown}>
         {records.map((record) => {
           const isSelected = record.year === selected.year;
-          const picture = assets[record.assetId];
           return (
             <button
               key={record.year}
@@ -54,14 +53,6 @@ export function HistoryStation({ copy, records, assets, initialYear }: HistorySt
               tabIndex={isSelected ? 0 : -1}
               onClick={() => setYear(record.year)}
             >
-              <Image
-                src={picture.src}
-                alt=""
-                width={picture.width}
-                height={picture.height}
-                sizes="(max-width: 767px) 42vw, 180px"
-                style={{ width: "100%", height: "auto", objectFit: "contain" }}
-              />
               <span className="year-tab-year">{record.year}</span>
               <span className="year-tab-city">{record.city}</span>
             </button>
